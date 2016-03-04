@@ -89,7 +89,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   5*x = 0         => 0
  */
 function getLinearEquationRoot(a, b) {
-   throw new Error('Not implemented');
+   return -b / a;
 }
 
 
@@ -111,7 +111,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-   throw new Error('Not implemented');
+  // console.log('123')
+  // console.log(Math.sqrt((x1*x1 + x2*x2)) * Math.sqrt((y1*y1 + y2*y2)))
+  // return Math.acos((x1*y1 + x2*y2) / Math.sqrt((x1*x1 + x2*x2)) * Math.sqrt((y1*y1 + y2*y2)));
+  throw new Error('Not implemented');
 }
 
 /**
@@ -127,7 +130,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-   throw new Error('Not implemented');
+  return value % 10;
 }
 
 
@@ -143,7 +146,7 @@ function getLastDigit(value) {
  * '-525.5'     => -525.5
  */
 function parseNumberFromString(value) {
-   throw new Error('Not implemented');
+  return parseFloat(value);
 }
 
 /**
@@ -218,7 +221,8 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-   throw new Error('Not implemented');
+  var toReturn = parseInt(value, 10);
+  return isNaN(toReturn) ? def : toReturn;
 }
 
 module.exports = {
