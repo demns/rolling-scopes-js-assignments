@@ -203,9 +203,21 @@ function roundToPowerOfTen(num, pow) {
  *   17 => false
  */
 function isPrime(n) {
-   throw new Error('Not implemented');
-}
+     if (n === 1) {return true}
+  // thanks http://stackoverflow.com/questions/24094731/how-to-check-if-the-value-in-a-text-box-is-prime-or-not-with-jquery
+   // If n is less than 2 or not an integer then by definition cannot be prime.
+   if (n < 2) {return false}
+   if (n != Math.round(n)) {return false}
 
+   // Now check every whole number from 2 to the square root of n. If any of these divides n exactly, n cannot be prime.
+   for (var i = 2; i <= Math.sqrt(n); i++) {
+      if (n % i == 0) {return false}
+   }
+
+   // If n%i was never == 0 above, then n must be prime
+   return true;
+
+}
 /**
  * Tries to convert value to number and returns it if conversion was successfull;
  * otherwise returns default value passed as a second argument.

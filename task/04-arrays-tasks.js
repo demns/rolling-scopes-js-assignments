@@ -38,8 +38,8 @@ function findElement(arr, value) {
  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
  *    [] => [] 
  */
-function doubleArray(arr, value) {
-   throw new Error('Not implemented');
+function doubleArray(arr, value) { // value?
+   return arr.concat(arr);
 }
 
 
